@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="JavaScript/FuncionesCubiculo.js"></script>
     <title>GÖETIA</title>
 </head>
 
@@ -56,17 +57,18 @@
             </div>
         </div>
         <div style="text-align: center; width:314px; margin-top: 50px;">
-            <input type="button" value="CREAR">
-            <input type="button" value="EDITAR">
-            <input type="button" value="BORRAR">
+            <input type="button" value="CREAR" onclick="crearCubiculo()">
+            <input type="button" value="EDITAR" onclick="editarCubiculo()">
+            <input type="button" value="BORRAR" onclick="borrarCubiculo()">
         </div>
     </div>
     <br />
     <div style="width:340px; text-align: center;">
         <h2>CONSULTAS</h2>
     </div>
-    <div style="border:solid; border-color:black; width:320px; height: 130px; padding-top: 10px">
-        <div style="width:340px; margin: 10px; height: 10px;">
+
+    <div style="border:solid; border-color:black; width:320px; height: 140px;  padding-top: 10px">
+        <div style="width:340px; margin: 10px; height: 15px;">
             <div style="width:120px; float: left;">
                 <label>ID</label>
             </div>
@@ -74,21 +76,27 @@
                 <input type="number" id="CubConsultaID">
             </div>
         </div>
-        <div style="text-align: center; width:314px; margin-top: 50px;">
-            <input type="button" value="TODO">
-            <input type="button" value="SELECCIÓN">
+        <div style="text-align: center; width:314px; ">
+            <div style="text-align: center; width:314px; margin-top: 50px;">
+                <input type="button" value="TODO" onclick="consultarCubiculoTodo()">
+                <input type="button" value="SELECCIÓN" onclick="consultarCubiculoSeleccion($('#CubConsultaID'))">
+            </div>
         </div>
-        <div style="text-align: center; width:314px; margin-top: 50px;">
+    </div>
+    <br />
+    <table>
+        <tr>
             <table border="1" cellpadding="3" id="CubTabla">
                 <tbody>
                 </tbody>
             </table>
-        </div>
-    </div>
+        </tr>
+    </table>
+
     <div style="width:340px; text-align: center; margin-top: 50px;">
-        <a href="Client.html" style="margin-right: 5px;"><strong>CLIENTES</strong></a> 
+        <a href="Client.html" style="margin-right: 5px;"><strong>CLIENTES</strong></a>
         <a href="Message.html" style="margin-left: 5px;"><strong>MENSAJES</strong></a>
-</div> 
+    </div>
 </body>
 
 </html>
