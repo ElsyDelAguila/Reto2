@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="JavaScript/FuncionesMessage.js"></script>
     <title>GÖETIA</title>
 </head>
 
@@ -31,9 +32,9 @@
             </div>
         </div>
         <div style="text-align: center; width:314px; margin-top: 50px;">
-            <input type="button" value="CREAR">
-            <input type="button" value="EDITAR">
-            <input type="button" value="BORRAR">
+            <input type="button" value="CREAR" onclick="crearMensajes()">
+            <input type="button" value="EDITAR" onclick="editarMensajes()">
+            <input type="button" value="BORRAR" onclick="borrarMensajes()">
         </div>
     </div>
     <br />
@@ -50,8 +51,9 @@
             </div>
         </div>
         <div style="text-align: center; width:314px; margin-top: 50px;">
-            <input type="button" value="TODO">
-            <input type="button" value="SELECCIÓN">
+            <input type="button" value="TODO" onclick="consultarMensajesTodo()">
+            <input type="button" value="SELECCIÓN" onclick="consultarMensajesSeleccion($('#ConsultMessageID'))">
+
         </div>
         <div style="text-align: center; width:314px; margin-top: 50px;">
             <table border="1" cellpadding="3" id="MessageTabla">
@@ -59,10 +61,10 @@
                 </tbody>
             </table>
         </div>
-    </div>
-    <div style="width:340px; text-align: center; margin-top: 50px;">
-            <a href="Cubiculo.html" style="margin-right: 5px;"><strong>CUBÍCULOS</strong></a> 
+        <div style="width:340px; text-align: center; margin-top: 50px;">
+            <a href="Cubiculo.html" style="margin-right: 5px;"><strong>CUBÍCULOS</strong></a>
             <a href="Client.html" style="margin-left: 5px;"><strong>CLIENTES</strong></a>
+        </div>
     </div>
 </body>
 
