@@ -147,18 +147,6 @@ function consultarCubiculoSeleccion(CubConsultaID) {
     });
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 function limpiarFormularioCubiculo() {
     $("#CubID").val("");
     $("#CubTarget").val("");

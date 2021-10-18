@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="JavaScript/FuncionesClient.js"></script>
     <title>GÖETIA</title>
 </head>
 
@@ -47,39 +48,46 @@
             </div>
         </div>
         <div style="text-align: center; width:314px; margin-top: 50px;">
-            <input type="button" value="CREAR">
-            <input type="button" value="EDITAR">
-            <input type="button" value="BORRAR">
+            <input type="button" value="CREAR" onclick="crearClientes()">
+            <input type="button" value="EDITAR" onclick="editarClientes()"> 
+            <input type="button" value="BORRAR" onclick="borrarClientes()">
         </div>
     </div>
     <br />
     <div style="width:340px; text-align: center;">
         <h2>CONSULTAS</h2>
     </div>
-    <div style="border:solid; border-color:black; width:320px; height: 130px; padding-top: 10px">
-        <div style="width:340px; margin: 10px; height: 10px;">
+
+    <div style="border:solid; border-color:black; width:320px; height: 140px;  padding-top: 10px">
+        <div style="width:340px; margin: 10px; height: 15px;">
             <div style="width:120px; float: left;">
                 <label>ID</label>
             </div>
             <div style="width: 220px; float: left;">
-                <input type="number" id="ConsultClientID">
+                <input type="number" id="ClientConsultaID">
             </div>
         </div>
-        <div style="text-align: center; width:314px; margin-top: 50px;">
-            <input type="button" value="TODO">
-            <input type="button" value="SELECCIÓN">
+        <div style="text-align: center; width:314px; ">
+            <div style="text-align: center; width:314px; margin-top: 50px;">
+                <input type="button" value="TODO" onclick="consultarClienteTodo()">
+                <input type="button" value="SELECCIÓN" onclick="consultarClientesSeleccion($('#ClientConsultaID'))">
+            </div>
         </div>
-        <div style="text-align: center; width:314px; margin-top: 50px;">
+    </div>
+    <br />
+    <table>
+        <tr>
             <table border="1" cellpadding="3" id="ClientTabla">
                 <tbody>
                 </tbody>
             </table>
-        </div>
-    </div> 
+        </tr>
+    </table>
+
     <div style="width:340px; text-align: center; margin-top: 50px;">
-        <a href="Cubiculo.html" style="margin-right: 5px;"><strong>CUBÍCULOS</strong></a> 
+        <a href="Cubiculo.html" style="margin-right: 5px;"><strong>CUBICULOS</strong></a>
         <a href="Message.html" style="margin-left: 5px;"><strong>MENSAJES</strong></a>
-</div>   
+    </div>
 </body>
 
 </html>
